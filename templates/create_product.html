@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+
+{%block title%}create product{%endblock%}
+
+{%block content%}
+
+<div class="container">
+    <h1>Create Product</h1>
+    <form action="/productos" method="POST">
+        <div class="form-group">
+            <label for="Titulo">Product Name</label>
+            <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter product name">
+        </div>
+        <div class="mb-3">
+            <label for="Descripcion">Product Description</label>
+            <textarea class="form-control" id="productDescription" name="productDescription" rows="3" placeholder="Enter product description"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="precio">Product Price</label>
+            <input type="number" class="form-control" id="productPrice" name="productPrice" placeholder="Enter product price">
+        </div>
+        <button type="submit" class="btn btn-primary">Create Product</button>
+    </form>
+</div>
+
+{%endblock%}
